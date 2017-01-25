@@ -31,23 +31,11 @@ def self.list()
 
 
 def identify_artist()
-
+sql = "SELECT * FROM artists WHERE id = #{@performer_id};"
+artist = SqlRunner.run( sql ).first
+result = Artist.new( artist )
+return result
 end
-
-# def save()
-#   sql = "INSERT INTO customers (name) VALUES ('#{@name}') returning *;"
-#   result = SqlRunner.run(sql)
-
-#   @id = result.first['id'].to_i
-
-# end
-
-
-# def self.all()
-#   sql = "SELECT * FROM customers;"
-#   customers = SqlRunner.run(sql)
-#   return customers.map { |person| Customer.new( person ) }
-# end
 
 
 

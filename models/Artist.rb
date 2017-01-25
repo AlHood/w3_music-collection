@@ -25,9 +25,26 @@ def self.list()
 
 
 def list_by_artist
-
+sql = "SELECT * FROM albums WHERE performer_id = #{@id};"
+albums = SqlRunner.run(sql)
+result = albums.map { |album| Album.new ( album )}
+return result
 end
 
+
+
+
+
+
+
+
+
+# def pizza_orders()
+#   sql = "SELECT * FROM pizza_orders WHERE customer_id = #{@id};"
+#   orders = SqlRunner.run( sql )
+#   result = orders.map { |order| PizzaOrder.new (order) }
+#   return result
+# end
 
 
 end

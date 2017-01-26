@@ -37,10 +37,22 @@ result = Artist.new( artist )
 return result
 end
 
+def delete()
+sql = "DELETE FROM albums WHERE id = #{@performer_id};"
+SqlRunner.run(sql)
+end
 
+def edit()
+sql = "UPDATE album SET (title, genre) = ('#{@title}', '#{@genre}') WHERE id = #{@id}"
+SqlRunner.run(sql)
 
+end
 
-
+  def self.find(ident)
+  sql = "SELECT * FROM albums WHERE id = #{ident.to_i};"
+  result = SqlRunner.run(sql)
+  return result 
+  end
 
 end
 

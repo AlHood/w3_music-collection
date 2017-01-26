@@ -26,7 +26,21 @@ binding.pry
 
 nil
 
-# And eventually -
+# # And eventually -
+# puts "______      _____          "
+# puts "| ___ \    |  _  |         "
+# puts "| |_/ /___ | | | |_ __     "
+# puts "|    // _ \| | | | '__|    "
+# puts "| |\ \ (_) \ \/' / |       "
+# puts "\_| \_\___/ \_/\_\_|       "
+# puts "                           "
+# puts "                           "
+# puts "       _          _        "
+# puts "      | |        | |       "
+# puts "      | |__   ___| |_ __ _ "
+# puts "      | '_ \ / _ \ __/ _` |"
+# puts "      | |_) |  __/ || (_| |"
+# puts "      |_.__/ \___|\__\__,_|"
 # puts "   ================== | Main Menu | ================== "
 # puts " Select option:"
 # puts "[1] Create Album "

@@ -50,8 +50,9 @@ end
 
   def self.find(ident)
   sql = "SELECT * FROM albums WHERE id = #{ident.to_i};"
-  result = SqlRunner.run(sql)
-  return result 
+  result1 = SqlRunner.run(sql).first
+result2 = Album.new( result1 )
+  return result2 
   end
 
 end

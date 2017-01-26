@@ -31,12 +31,6 @@ result = albums.map { |album| Album.new ( album )}
 return result
 end
 
-def self.find(ident)
-sql = "SELECT * FROM artists WHERE id = #{ident.to_i};"
-result = SqlRunner.run(sql)
-return result 
-end
-
 
 def delete()
 sql2 = "DELETE FROM albums WHERE performer_id = #{@id};"
@@ -51,21 +45,12 @@ SqlRunner.run(sql)
 
 end
 
-# def delete()
-#   db = PG.connect( { dbname: 'pizza_shop', host: 'localhost'})
-#   sql = "DELETE FROM pizza_orders WHERE id =#{@id};"
-#   db.exec(sql)
-#   db.close
-# end
-
-# def update()
-#   db = PG.connect ({ dbname: 'pizza_shop', host: 'localhost'})
-#   sql = "UPDATE pizza_orders SET (topping, quantity, customer_id) = ('#{@topping}', #{@quantity}, #{customer_id}) WHERE id = #{@id};"
-#   db.exec(sql)
-#   db.close
-# end
-
-
+def self.find(ident)
+sql = "SELECT * FROM artists WHERE id = #{ident.to_i};"
+result1 = SqlRunner.run(sql).first 
+result2 = Artist.new( result1 )
+return result2
+end
 
 
 

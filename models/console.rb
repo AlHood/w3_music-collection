@@ -26,6 +26,17 @@ binding.pry
 
 nil
 
+
+
+
+
+
+
+
+
+
+
+
 # # And eventually -
 # puts "______      _____          "
 # puts "| ___ \    |  _  |         "
@@ -45,8 +56,22 @@ nil
 # puts " Select option:"
 # puts "[1] Create Album "
 # puts "[2] Create Artist "
-# puts "[3] List something or other etc
-#
+# puts "[3] List something or other etc"
+# puts "[4] Find an artist by id "
+# input = gets.chomp.to_i
+# if input = 4 then
+#   puts "Which id do you want to look up?"
+#   input2 = gets.chomp.to_i
+# puts Artist.find(input2)
+
+# end
+
+
+
+# binding.pry
+
+# nil
+
 
 
 

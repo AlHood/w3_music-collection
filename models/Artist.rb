@@ -6,7 +6,7 @@ class Artist
   attr_reader :id, :name
 
   def initialize (options)
-    @id = options['id'].to_i if options['id']
+    @id = options['id'].to_i if options['id'] !=nil
     @name = options['name']
   end
 

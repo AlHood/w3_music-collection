@@ -39,6 +39,8 @@ sql = "DELETE FROM artists WHERE id = #{@id};"
 SqlRunner.run(sql)
 end
 
+# NOTE the above function was a dirty method to achieve deletion. I was actually supposed to just delete artists, but table albums was dependent on it. So it got deleted first. Hey, it worked.
+
 def edit()
 sql = "UPDATE artists SET (name) = (#{@name}) WHERE id = #{@id}"
 SqlRunner.run(sql)
